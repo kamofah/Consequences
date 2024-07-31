@@ -4,8 +4,9 @@ import { AntDesign } from '@expo/vector-icons';
 import { useState } from 'react'
 import Button from '../components/general/Button'
 import PlayerTag from '../components/general/PlayerTag';
+import BackButton from '../components/general/BackButton';
 
-const WaitingRoom = () => {
+const WaitingRoom = ({navigation}) => {
     const [playerCount, setPlayerCount] = useState(0);
     const [players, setPlayers] = useState([])
     const generateGameQRCode = () => {
@@ -17,10 +18,7 @@ const WaitingRoom = () => {
     return (
         <View style={styles.container}>
             <View>
-                <TouchableOpacity style={styles.backButton}>
-                    <AntDesign name="left" size={24} color="black" />
-                    <Text style={styles.backButtonText}>Back</Text>
-                </TouchableOpacity>
+                <BackButton></BackButton>
             </View>
             <View style={styles.gameCodeCard}>
                 <View style={styles.QRCodeContainer}>
@@ -28,7 +26,7 @@ const WaitingRoom = () => {
                 </View>
                 <Text style={styles.gameCode}>{gameCode}</Text>
             </View>
-            <Button text='Start'/>
+            <Button text='Start' onPress={() => navigation.navigate('Game')}/>
             <View>
                 {/* {
                     players.map((player) => {
@@ -51,18 +49,7 @@ const styles = StyleSheet.create({
         gap: 20
     },
 
-    backButton: {
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center'
-    }, 
-
-    backButtonText: {
-        fontSize: 16,
-        textTransform: 'uppercase',
-        fontWeight: '600',
-        letterSpacing: 1,
-    },
+   
 
     playerCountContainer: {
         backgroundColor: 'black',
