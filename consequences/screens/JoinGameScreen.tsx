@@ -1,9 +1,9 @@
 import { View, Text, TextInput, StyleSheet, Pressable } from 'react-native';
 import React, { useState } from 'react';
-import Input from '../components/general/Input';
 import Button from '../components/general/Button';
 import { CameraView, useCameraPermissions } from 'expo-camera';
 import BackButton from '../components/general/BackButton';
+import NumberInput from '../components/general/NumberInput';
 
 const JoinGameScreen = () => {
   const [authScreen, setAuthScreen] = useState(false);
@@ -24,12 +24,7 @@ const JoinGameScreen = () => {
         {authScreen ? (
           <View style={styles.authScreen}>
             <Text style={styles.text}>Enter The Game Code</Text>
-            <View style={styles.codeInput}>
-              <Input type='numeric' />
-              <Input type='numeric' />
-              <Input type='numeric' />
-              <Input type='numeric' />
-            </View>
+            <NumberInput />
             <View style={styles.inputGroup}>
               <Text style={styles.text}>
                 or scan the given{' '}
@@ -97,13 +92,6 @@ const styles = StyleSheet.create({
   inputGroup: {
     display: 'flex',
     alignItems: 'center',
-    gap: 10,
-  },
-
-  codeInput: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
     gap: 10,
   },
 
