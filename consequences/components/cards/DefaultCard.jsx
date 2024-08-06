@@ -2,13 +2,10 @@ import { Text, StyleSheet } from 'react-native';
 import React from 'react';
 import CardLayout from '../../layouts/CardLayout';
 
-const DefaultCard = ({ prompt }) => {
+const DefaultCard = ({ prompt, topic }) => {
   return (
-    <CardLayout topic={'Truth'}>
-      <Text style={styles.prompt}>
-        Reveal details about a time when your partner really came through for
-        you. Toast them with a drink!
-      </Text>
+    <CardLayout topic={topic}>
+      <Text style={styles.prompt}>{prompt}</Text>
     </CardLayout>
   );
 };

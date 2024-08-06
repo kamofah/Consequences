@@ -1,18 +1,24 @@
 import { User } from './userTypes';
 
-export type CardTopics = 'TRUTH' | 'DARE' | 'GUYS' | 'GALS' | 'FREAKY' | 'AD';
+export type CardTopics =
+  | 'TRUTH'
+  | 'DARE'
+  | 'GUYS'
+  | 'GALS'
+  | 'FREAKY'
+  | 'ASSUME'
+  | 'AD';
+export type CardTypes = 'DEFAULT' | 'INPUT' | 'AD';
 
 export interface Card {
   cardID: number;
   topic: CardTopics;
-  // cardType:
+  cardType: CardTypes;
   prompt: string;
   consequence: number;
   playersNeeded: number;
-  timer: number;
-  assignedTo: User;
+  timer: number | null;
+  assignedTo: User | null;
 }
 
-export interface Deck {
-  deckOrder: number[];
-}
+export type Deck = Card[];

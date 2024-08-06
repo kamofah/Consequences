@@ -2,8 +2,11 @@ import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
 import DoneButton from '../components/general/DoneButton';
 import { Colors } from '../constants/colors';
+import { useDeck } from '../hooks/useDeck';
 
 const CardLayout = ({ children, topic }) => {
+  const { changeCard } = useDeck();
+
   return (
     <View style={styles.container}>
       <View style={styles.cardTypeSection}>
@@ -12,7 +15,7 @@ const CardLayout = ({ children, topic }) => {
       <View style={styles.promptSection}>{children}</View>
       <View style={styles.cardFooter}>
         <Text style={styles.prompt}>#Consequences</Text>
-        <DoneButton />
+        <DoneButton action={changeCard} />
       </View>
     </View>
   );
