@@ -8,7 +8,10 @@ const HomeScreen = ({ navigation }) => {
       <Text style={styles.title}>Consequnces</Text>
       <Button text='Start Game' onPress={() => navigation.navigate('Wait')} />
       <Button text='Join Game' onPress={() => navigation.navigate('Join')} />
-      <Button text='Instructions' />
+      <Button
+        text='Instructions'
+        onPress={() => navigation.navigate('Instructions')}
+      />
     </View>
   );
 };
