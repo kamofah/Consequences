@@ -17,8 +17,16 @@ export interface Card {
   prompt: string;
   consequence: number;
   playersNeeded: number;
+  assignedTo: User[] | null;
   timer: number | null;
-  assignedTo: User | null;
+}
+
+export interface MusicCard extends Card {
+  song: null;
+  artist: string;
+  coverImage: null;
+  startTime: number;
+  endTime: number;
 }
 
 export type Deck = Card[];
