@@ -6,7 +6,10 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Consequnces</Text>
-      <Button text='Start Game' onPress={() => navigation.navigate('Wait')} />
+      <Button
+        text='Start Game'
+        onPress={() => navigation.navigate('GameStyle')}
+      />
       <Button text='Join Game' onPress={() => navigation.navigate('Join')} />
       <Button
         text='Instructions'
