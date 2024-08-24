@@ -1,7 +1,5 @@
-import { View, Text } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import React from 'react';
-import { HomeScreen } from '../screens';
 import GeneralInstructions from '../screens/GeneralInstructions';
 import HostInstructionsScreen from '../screens/HostInstructionsScreen';
 import PlayerInstructionsScreen from '../screens/PlayerInstructionsScreen';
