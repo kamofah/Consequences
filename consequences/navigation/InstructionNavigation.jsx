@@ -1,8 +1,8 @@
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import React from 'react';
-import GeneralInstructions from '../screens/GeneralInstructions';
-import HostInstructionsScreen from '../screens/HostInstructionsScreen';
-import PlayerInstructionsScreen from '../screens/PlayerInstructionsScreen';
+import GeneralInstructions from '../screens/instructions/GeneralInstructions';
+import HostInstructionsScreen from '../screens/instructions/HostInstructionsScreen';
+import PlayerInstructionsScreen from '../screens/instructions/PlayerInstructionsScreen';
 
 const InstructionNavigation = () => {
   const Tab = createMaterialTopTabNavigator();
