@@ -55,6 +55,16 @@ export const cardDeck: Deck = [
     timer: null,
     assignedTo: null,
   },
+  {
+    cardID: 5,
+    cardType: 'DEFAULT',
+    topic: 'FREAKY',
+    prompt: 'Nibble on the ear lobe of the person to the right',
+    consequence: 3,
+    playersNeeded: 1,
+    timer: null,
+    assignedTo: null,
+  },
 ];
 
 export const shuffleDeck = (deck: Deck) => {

@@ -7,6 +7,8 @@ export type CardTopics =
   | 'GALS'
   | 'FREAKY'
   | 'ASSUME'
+  | 'FLIRTATION'
+  | 'PARANOIA'
   | 'AD';
 export type CardTypes = 'DEFAULT' | 'INPUT' | 'AD';
 
@@ -27,6 +29,11 @@ export interface MusicCard extends Card {
   coverImage: null;
   startTime: number;
   endTime: number;
+}
+
+export interface ParanoiaCard extends Card {
+  recipeint: User;
+  input: string;
 }
 
 export type Deck = Card[];

@@ -4,6 +4,7 @@ import BackButton from '../components/general/BackButton';
 import DefaultCard from '../components/cards/DefaultCard';
 
 import { useDeck } from '../hooks/useDeck';
+import { Colors } from '../constants/colors';
 
 const GameScreen = () => {
   const { currentCard } = useDeck();
@@ -26,14 +27,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 25,
-    // gap: 20
   },
 
   cardContainer: {
     flex: 1,
     display: 'flex',
     justifyContent: 'center',
-    shadowColor: '#adb5bd',
+    shadowColor: Colors.CARD_SHADOW,
     shadowOffset: { width: 8, height: 10 },
     shadowOpacity: 0.8,
     shadowRadius: 2,

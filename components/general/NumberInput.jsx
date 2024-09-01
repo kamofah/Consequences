@@ -1,4 +1,5 @@
 import { View, StyleSheet } from 'react-native';
+import Input from './Input';
 import React from 'react';
 
 const NumberInput = () => {

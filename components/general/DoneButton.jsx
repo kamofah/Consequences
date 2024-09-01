@@ -1,9 +1,12 @@
 import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 import React from 'react';
 
-const DoneButton = ({ action }) => {
+const DoneButton = ({ action, color }) => {
   return (
-    <TouchableOpacity style={styles.container} onPress={action}>
+    <TouchableOpacity
+      style={[styles.container, { backgroundColor: color }]}
+      onPress={action}
+    >
       <Text style={styles.buttonText}>Done</Text>
     </TouchableOpacity>
   );

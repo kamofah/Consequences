@@ -20,7 +20,7 @@ const GameStyleScreen = ({ navigation }) => {
         <Button
           text='Multi-Screen'
           onPress={() => navigation.navigate('Wait')}
-          isDisabled={true}
+          isDisabled={false}
         >
           <MaterialIcons name='offline-share' size={24} color='white' />
         </Button>

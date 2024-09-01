@@ -9,13 +9,15 @@ const CardLayout = ({ children, topic }) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.cardTypeSection}>
+      <View
+        style={[styles.cardTypeSection, { backgroundColor: Colors[topic] }]}
+      >
         <Text style={styles.cardType}>{topic}</Text>
       </View>
       <View style={styles.promptSection}>{children}</View>
       <View style={styles.cardFooter}>
         <Text style={styles.prompt}>#Consequences</Text>
-        <DoneButton action={changeCard} />
+        <DoneButton action={changeCard} color={Colors[topic]} />
       </View>
     </View>
   );
@@ -32,7 +34,6 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: Colors.DARE,
     height: '25%',
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,

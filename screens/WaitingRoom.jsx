@@ -17,8 +17,10 @@ const WaitingRoom = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <View>
-        <BackButton></BackButton>
+      <View
+        style={{ width: '100%', display: 'flex', alignItems: 'flex-start' }}
+      >
+        <BackButton />
       </View>
       <View style={styles.gameCodeCard}>
         <View style={styles.QRCodeContainer}>
@@ -26,7 +28,9 @@ const WaitingRoom = ({ navigation }) => {
         </View>
         <Text style={styles.gameCode}>{gameCode}</Text>
       </View>
-      <Button text='Start' onPress={() => navigation.navigate('Game')} />
+      <View style={{ width: '100%' }}>
+        <Button text='Start' onPress={() => navigation.navigate('Game')} />
+      </View>
       <View>
         {/* {
                     players.map((player) => {
@@ -34,14 +38,7 @@ const WaitingRoom = ({ navigation }) => {
                     })
                 } */}
       </View>
-      <View
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'flex-end',
-          height: 350,
-        }}
-      >
+      <View style={styles.footer}>
         <View style={styles.playerCountContainer}>
           <Text style={styles.playerCount}>Players: {playerCount}</Text>
         </View>
@@ -52,14 +49,18 @@ const WaitingRoom = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    alignItems: 'center',
     padding: 20,
-    gap: 20,
+    gap: 25,
   },
 
   playerCountContainer: {
+    display: 'flex',
+    justifyContent: 'flex-end',
     backgroundColor: 'black',
     padding: 10,
-    borderRadius: 15,
+    borderRadius: 25,
     width: 125,
   },
 
@@ -88,6 +89,13 @@ const styles = StyleSheet.create({
   gameCode: {
     fontSize: 30,
     fontWeight: 'bold',
+  },
+
+  footer: {
+    display: 'flex',
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
   },
 });
 
