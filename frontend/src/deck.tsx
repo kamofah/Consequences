@@ -1,4 +1,4 @@
-import { Deck } from './types/cardTypes';
+import { Deck } from '../../frontend/src/types/cardTypes';
 
 export const cardDeck: Deck = [
   {
