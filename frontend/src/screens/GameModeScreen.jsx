@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
 
   options: {
     display: 'flex',
+    justifyContent: 'center',
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: 10,
