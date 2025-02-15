@@ -15,7 +15,14 @@ export const useDeck = () => {
     setCurrentCard(deck[currentCardIndex]);
   }, [deck, currentCardIndex]);
 
-  const changeCard = () => setCurrentCardIndex(currentCardIndex + 1);
+  const goToNextCard = () => {
+    if(currentCardIndex + 1 > deck.length - 1){
+      setDeck(shuffleDeck(cardDeck));
+      setCurrentCardIndex(0);
+    } else {
+      setCurrentCardIndex(currentCardIndex + 1)
+    }
+  };
 
-  return { currentCard, changeCard };
+  return { currentCard, goToNextCard };
 };

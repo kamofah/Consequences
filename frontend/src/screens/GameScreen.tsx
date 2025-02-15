@@ -7,7 +7,7 @@ import { useDeck } from '../hooks/useDeck';
 import { Colors } from '../constants/colors';
 
 const GameScreen = () => {
-  const { currentCard } = useDeck();
+  const { currentCard, goToNextCard } = useDeck();
   return (
     <View style={styles.container}>
       <View>
@@ -17,6 +17,7 @@ const GameScreen = () => {
         <DefaultCard
           topic={currentCard?.topic}
           prompt={currentCard?.prompt}
+          action={goToNextCard}
         ></DefaultCard>
       </View>
     </View>

@@ -2,9 +2,9 @@ import { Text, StyleSheet } from 'react-native';
 import React from 'react';
 import CardLayout from '../../layouts/CardLayout';
 
-const DefaultCard = ({ prompt, topic }) => {
+const DefaultCard = ({ prompt, topic, action }) => {
   return (
-    <CardLayout topic={topic}>
+    <CardLayout topic={topic} action={action}>
       <Text style={styles.prompt}>{prompt}</Text>
     </CardLayout>
   );
