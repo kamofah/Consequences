@@ -1,8 +1,8 @@
-import { View, Text, StyleSheet } from 'react-native';
-import React, { useEffect, useState, useRef } from 'react';
-import BackButton from '../components/general/BackButton';
+import { View, StyleSheet } from 'react-native';
+import React, { useRef } from 'react';
+import BackButton from '../components/general/buttons/BackButton';
 import DefaultCard from '../components/cards/DefaultCard';
-import ShareButton from '../components/general/ShareButton';
+import ShareButton from '../components/general/buttons/ShareButton';
 
 import { useDeck } from '../hooks/useDeck';
 import { Colors } from '../constants/colors';

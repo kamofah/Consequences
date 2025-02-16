@@ -3,6 +3,9 @@ export const Colors = {
   SECONDARY: '#2ECC71',
   BACKGROUND: '#FFFFFF',
   CARD_SHADOW: '#ADB5BD',
+  SUCCESS: '#42C86A',
+  CAUTION: '#FFC107',
+  DANGER: '#DC3545',
   TEXT: '#333333',
   TRUTH: '#6B93D6', // Darker Pastel Blue
   DARE: '#D46975', // Darker Pastel Red
