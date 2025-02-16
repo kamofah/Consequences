@@ -4,6 +4,7 @@ import { captureRef } from 'react-native-view-shot';
 import * as Sharing from 'expo-sharing';
 import * as FileSystem from 'expo-file-system';
 import Octicons from '@expo/vector-icons/Octicons';
+import CircleButtonLayout from '../../../layouts/CircleButtonLayout';
 
 
 const ShareButton = ({backgroundColor, viewRef}) => {
@@ -57,9 +58,9 @@ const ShareButton = ({backgroundColor, viewRef}) => {
     };
 
     return (
-        <TouchableOpacity onPress={captureAndShare} style={[styles.container, { backgroundColor: backgroundColor }]}>
+        <CircleButtonLayout action={captureAndShare} backgroundColor={backgroundColor}>
             <Octicons name="share" size={24} color="white" />
-        </TouchableOpacity>
+        </CircleButtonLayout>
     )
 }
 
@@ -70,7 +71,6 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        // backgroundColor: ,
         padding: 10,
         width: 50,
         height: 50,
