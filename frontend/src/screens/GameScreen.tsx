@@ -1,25 +1,30 @@
 import { View, Text, StyleSheet } from 'react-native';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import BackButton from '../components/general/BackButton';
 import DefaultCard from '../components/cards/DefaultCard';
+import ShareButton from '../components/general/ShareButton';
 
 import { useDeck } from '../hooks/useDeck';
 import { Colors } from '../constants/colors';
 
 const GameScreen = () => {
   const { currentCard, goToNextCard } = useDeck();
+
+  const cardRef = useRef(null);
+
   return (
     <View style={styles.container}>
       <View>
         <BackButton></BackButton>
       </View>
-      <View style={styles.cardContainer}>
+      <View style={styles.cardContainer} ref={cardRef}>
         <DefaultCard
           topic={currentCard?.topic}
           prompt={currentCard?.prompt}
           action={goToNextCard}
         ></DefaultCard>
       </View>
+      <ShareButton viewRef={cardRef} backgroundColor={Colors[currentCard?.topic ?? 'CARD_SHADOW']}></ShareButton>
     </View>
   );
 };

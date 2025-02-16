@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
-import DoneButton from '../components/general/DoneButton';
+import NextButton from '../components/general/NextButton';
 import { Colors } from '../constants/colors';
 
 const CardLayout = ({ children, topic, action }) => {
@@ -15,7 +15,7 @@ const CardLayout = ({ children, topic, action }) => {
       <View style={styles.promptSection}>{children}</View>
       <View style={styles.cardFooter}>
         <Text style={styles.prompt}>#Consequences</Text>
-        <DoneButton action={action} color={Colors[topic]} />
+        <NextButton action={action} color={Colors[topic]} />
       </View>
     </View>
   );

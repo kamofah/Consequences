@@ -23,7 +23,9 @@
     "react-native-screens": "~4.4.0",
     "react-native-send-direct-sms": "^0.2.0",
     "react-native-svg": "15.8.0",
-    "react-native-tab-view": "^3.5.2"
+    "react-native-tab-view": "^3.5.2",
+    "react-native-view-shot": "~4.0.3",
+    "expo-sharing": "~13.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
