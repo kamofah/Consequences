@@ -1,12 +1,12 @@
 import { Text, StyleSheet } from 'react-native';
 import React from 'react';
-import CardLayout from '../../layouts/CardLayout';
+import GameCardLayout from '../../layouts/GameCardLayout';
 
 const DefaultCard = ({ prompt, topic, action }) => {
   return (
-    <CardLayout topic={topic} action={action}>
+    <GameCardLayout topic={topic} action={action}>
       <Text style={styles.prompt}>{prompt}</Text>
-    </CardLayout>
+    </GameCardLayout>
   );
 };
 

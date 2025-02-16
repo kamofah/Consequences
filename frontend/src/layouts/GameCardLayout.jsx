@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
-import NextButton from '../components/general/NextButton';
+import NextButton from '../components/general/buttons/NextButton';
 import { Colors } from '../constants/colors';
 
-const CardLayout = ({ children, topic, action }) => {
+const GameCardLayout = ({ children, topic, action }) => {
 
   return (
     <View style={styles.container}>
@@ -67,4 +67,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CardLayout;
+export default GameCardLayout;
