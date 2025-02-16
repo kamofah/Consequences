@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
-import Button from '../components/general/Button';
-import BackButton from '../components/general/BackButton';
+import Button from '../components/general/buttons/Button';
+import BackButton from '../components/general/buttons/BackButton';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 

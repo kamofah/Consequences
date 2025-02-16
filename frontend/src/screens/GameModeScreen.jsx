@@ -4,8 +4,8 @@ import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Colors } from '../constants/colors';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
-import BackButton from '../components/general/BackButton';
-import SquareButton from '../components/general/SquareButton';
+import BackButton from '../components/general/buttons/BackButton';
+import SquareButton from '../components/general/buttons/SquareButton';
 
 const GameModeScreen = ({ navigation }) => {
   const navigateTo = (screen) => {

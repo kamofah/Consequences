@@ -1,8 +1,8 @@
 import { View, Text, TextInput, StyleSheet, Pressable } from 'react-native';
 import React, { useState } from 'react';
-import Button from '../components/general/Button';
+import Button from '../components/general/buttons/Button';
 import { CameraView, useCameraPermissions } from 'expo-camera';
-import BackButton from '../components/general/BackButton';
+import BackButton from '../components/general/buttons/BackButton';
 import NumberInput from '../components/general/NumberInput';
 
 const JoinGameScreen = () => {

@@ -2,9 +2,9 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import QRCode from 'react-native-qrcode-svg';
 import { AntDesign } from '@expo/vector-icons';
 import { useState } from 'react';
-import Button from '../components/general/Button';
+import Button from '../components/general/buttons/Button';
 import PlayerTag from '../components/general/PlayerTag';
-import BackButton from '../components/general/BackButton';
+import BackButton from '../components/general/buttons/BackButton';
 
 const WaitingRoom = ({ navigation }) => {
   const [playerCount, setPlayerCount] = useState(0);
