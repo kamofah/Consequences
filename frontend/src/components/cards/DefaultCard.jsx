@@ -2,9 +2,9 @@ import { Text, StyleSheet } from 'react-native';
 import React from 'react';
 import GameCardLayout from '../../layouts/GameCardLayout';
 
-const DefaultCard = ({ prompt, topic, action }) => {
+const DefaultCard = ({ prompt, topic, action, shotCount }) => {
   return (
-    <GameCardLayout topic={topic} action={action}>
+    <GameCardLayout topic={topic} action={action} shotCount={shotCount}>
       <Text style={styles.prompt}>{prompt}</Text>
     </GameCardLayout>
   );

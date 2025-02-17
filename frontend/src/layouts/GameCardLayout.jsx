@@ -1,9 +1,10 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
-import NextButton from '../components/general/buttons/NextButton';
+import Pill from '../components/general/Pill';
 import { Colors } from '../constants/colors';
+import { formatShotCount } from '../utils';
 
-const GameCardLayout = ({ children, topic, action }) => {
+const GameCardLayout = ({ children, topic, shotCount }) => {
 
   return (
     <View style={styles.container}>
@@ -15,7 +16,7 @@ const GameCardLayout = ({ children, topic, action }) => {
       <View style={styles.promptSection}>{children}</View>
       <View style={styles.cardFooter}>
         <Text style={styles.prompt}>#Consequences</Text>
-        <NextButton action={action} color={Colors[topic]} />
+        <Pill text={shotCount + formatShotCount(shotCount)} color={Colors[topic]} />
       </View>
     </View>
   );

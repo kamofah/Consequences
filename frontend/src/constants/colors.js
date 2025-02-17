@@ -6,6 +6,7 @@ export const Colors = {
   SUCCESS: '#42C86A',
   CAUTION: '#FFC107',
   DANGER: '#DC3545',
+  GRAY: '#A5A5A5',
   TEXT: '#333333',
   TRUTH: '#6B93D6', // Darker Pastel Blue
   DARE: '#D46975', // Darker Pastel Red
