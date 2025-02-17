@@ -13,7 +13,9 @@
     "@react-navigation/native": "^6.1.18",
     "@react-navigation/native-stack": "^6.10.1",
     "expo": "^52.0.0",
+    "expo-barcode-scanner": "^13.0.1",
     "expo-camera": "~16.0.16",
+    "expo-sharing": "~13.0.1",
     "expo-status-bar": "~2.0.1",
     "react": "18.3.1",
     "react-native": "0.76.7",
@@ -24,8 +26,7 @@
     "react-native-send-direct-sms": "^0.2.0",
     "react-native-svg": "15.8.0",
     "react-native-tab-view": "^3.5.2",
-    "react-native-view-shot": "~4.0.3",
-    "expo-sharing": "~13.0.1"
+    "react-native-view-shot": "~4.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
