@@ -9,7 +9,7 @@ export const useDeck = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/cards/');
+        const response = await fetch('https://consequences.onrender.com/api/cards/');
         const json = await response.json();
         setDeck(shuffleDeck(json));
       } catch (error) {
