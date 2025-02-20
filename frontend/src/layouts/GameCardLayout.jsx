@@ -15,7 +15,7 @@ const GameCardLayout = ({ children, topic, shotCount }) => {
       </View>
       <View style={styles.promptSection}>{children}</View>
       <View style={styles.cardFooter}>
-        <Text style={styles.prompt}>#Consequences</Text>
+        <Text style={styles.hashtag}>#Consequences</Text>
         <Pill text={shotCount + formatShotCount(shotCount)} color={Colors[topic]} />
       </View>
     </View>
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
   },
 
-  prompt: {
+  hashtag: {
     fontWeight: 'bold',
     fontSize: 20,
     textAlign: 'left',

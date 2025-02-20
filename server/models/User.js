@@ -7,7 +7,8 @@ const userSchema = new mongoose.Schema({
     phoneNumber: {type: Number, required: true},
     gender: {type: String, required: true},
     profileImageUrl: {type: String},
-    tier: {type: String, default: "free"}
+    tier: {type: String, default: "free"},
+    isGameHost: {type: Boolean, default: false}
 }, { timestamps: true })
 
 module.exports = mongoose.model('User', userSchema);
